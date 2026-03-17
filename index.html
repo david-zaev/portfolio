@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DavkiLertheJ - Tech Portfolio</title>
+    <title>David Zaev — Developer</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-
     <nav class="navbar">
-        <a href="#home" class="logo">DavkiLertheJ_</a>
+        <a href="#home" class="logo">
+            <img src="logo.png" alt="DZ" class="logo-img">
+            <span>David Zaev</span>
+        </a>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -30,16 +30,16 @@
     </nav>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <p class="subtitle">&gt; init System.out.println("Hello World");</p>
-                <h1 class="glitch-text" data-text="DavkiLertheJ">DavkiLertheJ</h1>
-                <p class="description">Software Engineer, Hardware Hacker & Full-Stack Magician. I bridge the gap
-                    between silicon and servers.</p>
+                <p class="subtitle">Hey, I'm</p>
+                <h1>David Zaev</h1>
+                <p class="description">I build Android apps, tinker with hardware, and run my own servers.
+                    Currently working on <strong>SmartBus Skopje</strong> and <strong>Dreamscape</strong>.</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn primary-btn"><i class="fas fa-rocket"></i> View Projects</a>
-                    <a href="#skills" class="btn secondary-btn"><i class="fas fa-microchip"></i> Hardware & Code</a>
+                    <a href="#projects" class="btn primary-btn">See my work</a>
+                    <a href="#contact" class="btn secondary-btn">Get in touch</a>
                 </div>
             </div>
             <div class="hero-graphic">
@@ -48,119 +48,113 @@
                         <span class="dot red"></span>
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
+                        <span class="window-title">terminal</span>
                     </div>
-                    <div class="window-body">
-                        <pre><code>root@server:~# echo "Tech Savvy"
-<span class="output">Tech Savvy</span>
-root@server:~# ./deploy_app.sh --target=SmartbusSkopje
-<span class="output">Building... [OK]</span>
-root@server:~# systemctl status apache2
-<span class="output green-text">● apache2.service - The Apache Webserver
-   Active: active (running)</span></code></pre>
+                    <div class="window-body" id="terminal">
+                        <div id="terminal-output"></div>
+                        <div class="terminal-input-line">
+                            <span class="prompt">$</span>
+                            <input type="text" class="terminal-input" id="terminal-input"
+                                placeholder="type a command..." spellcheck="false" autocomplete="off">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects -->
         <section id="projects" class="projects">
-            <h2 class="section-title">Featured Creations</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="project-grid">
-                <!-- SmartBus Skopje -->
-                <div class="project-card reveal">
+                <div class="project-card">
                     <div class="card-inner">
-                        <div class="project-icon">
-                            <i class="fas fa-bus-alt"></i>
+                        <div class="project-header">
+                            <i class="fas fa-bus-alt project-icon"></i>
+                            <span class="project-type">Android</span>
                         </div>
                         <h3>SmartBus Skopje</h3>
-                        <p class="project-type">Android Application</p>
-                        <p>A comprehensive real-time bus tracking and prediction application developed natively.
-                            Delivering exact, data-driven utility directly to the user's pocket.</p>
+                        <p>Real-time bus tracking app for Skopje. Shows live positions, arrival predictions,
+                            and lets riders report crowding and delays.</p>
                         <div class="tech-stack">
                             <span>Kotlin</span>
                             <span>Java</span>
-                            <span>Android Studio</span>
+                            <span>PostgreSQL</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dreamscape -->
-                <div class="project-card reveal">
+                <div class="project-card">
                     <div class="card-inner">
-                        <div class="project-icon">
-                            <i class="fas fa-cloud"></i>
+                        <div class="project-header">
+                            <i class="fas fa-globe project-icon"></i>
+                            <span class="project-type">Web</span>
                         </div>
                         <h3>Dreamscape</h3>
-                        <p class="project-type">Web Platform</p>
-                        <p>Creator of the vivid, intricate Dreamscape website. Handling interactive functionality and
-                            smooth, aesthetic front-end design.</p>
-                        <a href="https://dreamscape.cloudns.be/" target="_blank" class="btn secondary-btn"
-                            style="margin-bottom: 1rem; width: 100%; justify-content: center;"><i
-                                class="fas fa-external-link-alt"></i> Visit Dreamscape</a>
+                        <p>An interactive website with smooth animations and custom front‑end design.
+                            Built from scratch without frameworks.</p>
+                        <a href="https://dreamscape.cloudns.be/" target="_blank" class="project-link">
+                            Visit site <i class="fas fa-arrow-right"></i>
+                        </a>
                         <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>Vanilla JS</span>
-                            <span>CSS3</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills -->
         <section id="skills" class="about-skills">
-            <h2 class="section-title">Hardware & Backend Architecture</h2>
-            <div class="skills-container reveal">
+            <h2 class="section-title">What I work with</h2>
+            <div class="skills-container">
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Server & DB</h3>
+                    <h3><i class="fas fa-server"></i> Infrastructure</h3>
                     <ul>
-                        <li><i class="fas fa-database"></i> MySQL</li>
-                        <li><i class="fas fa-database"></i> PostgreSQL</li>
-                        <li><i class="fas fa-network-wired"></i> Apache</li>
-                        <li><i class="fas fa-terminal"></i> Backend Mastery</li>
+                        <li>MySQL &amp; PostgreSQL</li>
+                        <li>Apache HTTP Server</li>
+                        <li>Linux server administration</li>
                     </ul>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-microchip"></i> Hardware & IoT</h3>
+                    <h3><i class="fas fa-microchip"></i> Hardware</h3>
                     <ul>
-                        <li><i class="fab fa-raspberry-pi"></i> Raspberry Pi</li>
-                        <li><i class="fas fa-wifi"></i> ESP32</li>
-                        <li><i class="fas fa-cogs"></i> Arduino</li>
-                        <li><i class="fas fa-satellite-dish"></i> Sensors & Wiring</li>
+                        <li>Raspberry Pi</li>
+                        <li>ESP32</li>
+                        <li>Arduino</li>
                     </ul>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Software & Mobile</h3>
+                    <h3><i class="fas fa-code"></i> Software</h3>
                     <ul>
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fab fa-android"></i> Android Studio</li>
-                        <li><i class="fab fa-java"></i> Kotlin / Java</li>
-                        <li><i class="fas fa-globe"></i> HTML/CSS/JS</li>
+                        <li>Kotlin / Java (Android)</li>
+                        <li>Python</li>
+                        <li>HTML, CSS, JavaScript</li>
                     </ul>
                 </div>
 
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section id="contact" class="contact">
-            <div class="contact-box reveal">
-                <h2>Ready to build the future?</h2>
-                <p>From microcontrollers to full cloud-based apps, let's architect the next big thing.</p>
-                <!-- Changed from mailto to a button that copies email to clipboard -->
-                <button id="contact-btn" class="btn primary-btn pulse-glow"
-                    style="cursor: pointer; font-family: inherit; font-size: inherit;">
-                    <i class="fas fa-envelope"></i> <span id="contact-text">davkilerthej@gmail.com</span>
+            <div class="contact-box">
+                <h2>Let's talk</h2>
+                <p>Have a project idea or just want to say hi? Drop me a line.</p>
+                <button id="contact-btn" class="btn primary-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span id="contact-text">zaev.david.at@gmail.com</span>
                 </button>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 DavkiLertheJ. All rights reserved.</p>
+        <p>&copy; 2026 David Zaev</p>
     </footer>
 
     <script src="script.js"></script>
