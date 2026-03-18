@@ -9,6 +9,7 @@ I'm an Engineering Student and Hardware Hacker with a strong focus on **electron
 - **Prototyping:** Experience moving from breadboard concepts to functional software-integrated solutions.
 
 ### 🚀 Projects
+- **[ZHome](https://github.com/david-zaev/ZHome)**: IoT temperature, humidity, and gas monitor using an ESP32 CYD and a native Android companion app over MQTT.
 - **[SmartBus Skopje](https://github.com/david-zaev/SmartBusSkopje)**: Native Android app (Kotlin/Java) with a PostgreSQL backend for real-time tracking.
 - **Hardware Tinkering**: Building and scripting custom sensor networks with ESP32/Arduino using C and Python.
 - **[Portfolio & Web](https://david-zaev.github.io/portfolio)**: Interactive front-end development (HTML/CSS/JS).
